@@ -75,6 +75,11 @@ resource "azurerm_virtual_network" "hub-vnet" {
   address_prefixes     = ["192.168.0.0/27"]
 }
 
+resource "azurerm_resource_group" "vnetrg" {
+username = "user1"
+password = "Welcome12323"
+}
+
   resource "azurerm_subnet" "subnet2" {
   name                 = "GatewaySubnet"
   resource_group_name  = azurerm_resource_group.hubrg.name
